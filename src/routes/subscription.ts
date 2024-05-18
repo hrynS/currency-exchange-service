@@ -1,8 +1,8 @@
-import { Request, Response, Router } from 'express';
+import { Router } from 'express';
+import { subscribe } from '../controllers/subscriptionController';
+
 const router = Router();
 
-router.post('/subscribe', (req: Request, res: Response) => {
-  res.send('// TODO: subscribed!');
-});
+router.post('/subscribe', subscribe);
 
 export default router;
