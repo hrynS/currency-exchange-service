@@ -1,10 +1,9 @@
-import { Request, Response, Router } from "express";
-import index from "../index";
+import { Request, Response, Router } from 'express';
+import currencyRoutes from './currency';
+import subscriptionRoutes from './subscription';
 
 const router = Router();
 
-router.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!");
-});
+router.use('/', currencyRoutes, subscriptionRoutes);
 
 export default router;
