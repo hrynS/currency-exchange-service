@@ -17,6 +17,10 @@ To run this project, you will need Docker and Docker Compose installed. Follow t
    - Node.js: >=18.19.x
    - Yarn: 4.1.1
 
+   To be able to send over the emails:
+   - Google account with an App password set up on https://myaccount.google.com/apppasswords
+
+
 1. Clone the repository:
    ```sh
    git clone https://github.com/hrynS/currency-exchange-service.git
@@ -39,7 +43,7 @@ To run this project, you will need Docker and Docker Compose installed. Follow t
    curl -X 'POST' 'http://localhost:8080/subscribe' \
    -H 'accept: application/json' \
    -H 'Content-Type: application/x-www-form-urlencoded' \
-   -d 'email=your.email@gmail.com'
+   -d 'email=subscribers.email@gmail.com'
 
 ### Business Logiс
 
