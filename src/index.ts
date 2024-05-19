@@ -12,14 +12,19 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', routes);
 app.use(errorHandler);
 
-syncDatabase()
-  .then(() => {
-    app.listen(port, hostname, () => {
-      console.log(`Server is running on port ${port}`);
-    });
-  })
-  .catch((error) => {
-    console.error('Failed to sync database:', error);
-  });
+// TODO: sync database
+// syncDatabase()
+//   .then(() => {
+//     app.listen(port, hostname, () => {
+//       console.log(`Server is running on port ${port}`);
+//     });
+//   })
+//   .catch((error) => {
+//     console.error('Failed to sync database:', error);
+//   });
+
+app.listen(port, hostname, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
 export default app;

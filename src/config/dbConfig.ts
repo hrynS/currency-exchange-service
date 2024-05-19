@@ -9,6 +9,19 @@ const config = {
   dialect: 'postgres' as Dialect,
 };
 
-const sequelize = new Sequelize(config);
+if (Object.values(config).some((val) => !val)) {
+  console.error('Error: Missing environment variables for database connection');
+}
+
+const sequelize = new Sequelize(
+  config.database!,
+  config.username!,
+  config.password!,
+  {
+    host: config.host,
+    port: config.port,
+    dialect: config.dialect,
+  },
+);
 
 export default sequelize;
