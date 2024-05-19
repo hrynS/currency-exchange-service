@@ -35,12 +35,21 @@ The service is designed following a **Service-Oriented Architecture (SOA)** para
 
 To run this project, you will need Docker and Docker Compose installed. Follow these steps to set up and run the project:
 
+0. Prerequisites
+   To run project:
+   - Docker: 20.10.0 or later
+   - Docker Compose: 1.27.0 or later
+
+   To develop and test locally: 
+   - Node.js: >=18.19.x
+   - Yarn: 4.1.1
+
 1. Clone the repository:
    ```sh
    git clone https://github.com/your-username/your-repository.git
    cd your-repository
    
-2. Build and start the containers: // TODO
+2. Build and start the Docker containers:
    ```sh
    docker-compose up --build
    
@@ -48,4 +57,4 @@ To run this project, you will need Docker and Docker Compose installed. Follow t
    
 ## API specification
 
-C
+// TODO

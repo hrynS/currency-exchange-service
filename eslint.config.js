@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
     env: {
         node: true,
         es2022: true,
@@ -24,5 +24,3 @@ const config = {
         'prettier/prettier': 'error',
     },
 };
-
-export default config;
