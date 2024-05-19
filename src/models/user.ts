@@ -7,7 +7,8 @@ interface UserAttributes {
   subscribedAt: Date;
 }
 
-interface UserCreationAttributes extends Optional<UserAttributes, 'id'> {}
+interface UserCreationAttributes
+  extends Optional<UserAttributes, 'id' | 'subscribedAt'> {}
 
 class User
   extends Model<UserAttributes, UserCreationAttributes>
@@ -44,5 +45,11 @@ User.init(
     modelName: 'User',
   },
 );
+
+User.beforeCreate((user) => {
+  if (!user.subscribedAt) {
+    user.subscribedAt = new Date();
+  }
+});
 
 export default User;
